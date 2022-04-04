@@ -1,2 +1,2 @@
-# doctor-ui
- The user Interface for doctors to access myTelehealth services
+# myTeleHealth - Doctor
+ myTeleHealth Doctor is the user interface for Doctors to access myTelehealth services
