@@ -1,10 +1,9 @@
-version: "4.6.1"
+version: '4.6.1'
 
 volumes:
   rabbitmq_data:
 
 services:
- 
   #################################
   # Book: The appointment microservice
   #################################
@@ -14,16 +13,16 @@ services:
     environment:
       PYTHONUNBUFFERED: 1
     ports:
-      - "5004:5004"
- 
+      - '5004:5004'
+
   ###############################################
   # zoom: Zoom-api microservice
   ###############################################
   zoom-api:
     image: jxyan/zoomapi
     restart: always
-    ports: 
-      - "5006:5006"
+    ports:
+      - '5006:5006'
 
   ###############################################
   # Book Appointment: Book Appointment Complex microservice
@@ -37,19 +36,19 @@ services:
     restart: always
     environment:
       PYTHONUNBUFFERED: 1
-    ports: 
-      - "5100:5100"
+    ports:
+      - '5100:5100'
 
   rabbitmq:
     image: rabbitmq:3-management
     hostname: esd-rabbit
     restart: always
     ports:
-      - "5672:5672"
-      - "15672:15672"
-    volumes: 
+      - '5672:5672'
+      - '15672:15672'
+    volumes:
       - rabbitmq_data:/var/lib/rabbitmq
-  
+
   # Patient: The Patient microservice
   ###################################
   patient:
@@ -58,7 +57,7 @@ services:
     environment:
       PYTHONUNBUFFERED: 1
     ports:
-      - "5002:5002"
+      - '5002:5002'
 
   # Medical Records microservice
   ###################################
@@ -68,7 +67,7 @@ services:
     environment:
       PYTHONUNBUFFERED: 1
     ports:
-      - "5003:5003"
+      - '5003:5003'
 
   ###################################
   # Error: The Error microservice
@@ -100,7 +99,7 @@ services:
       rabbit_port: 5672
       PYTHONUNBUFFERED: 1
     ports:
-      - "5101:5101"
+      - '5101:5101'
 
   # # Doctor: The doctor microservice
   # ###################################
@@ -110,7 +109,7 @@ services:
     environment:
       PYTHONUNBUFFERED: 1
     ports:
-      - "5001:5001"
+      - '5001:5001'
 
   # # MakePayment: The complex for making payment
   # ###################################
@@ -129,7 +128,7 @@ services:
       rabbit_host: rabbitmq
       rabbit_port: 5672
     ports:
-      - "5200:5200"
+      - '5200:5200'
 
   # # payment: payment microservice
   # ###################################
@@ -139,7 +138,7 @@ services:
     environment:
       PYTHONUNBUFFERED: 1
     ports:
-      - "5007:5007"
+      - '5007:5007'
 
   # # STRIPE
   # #################################
