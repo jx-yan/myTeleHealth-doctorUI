@@ -59,6 +59,8 @@ npm run dev
 - Handled Business Logic - Deconflict of appointment schedule, Payment Error Handling
 - Using NodeJS and ExpressJS for Zoom Microservice
 
+View [PatientUI](https://github.com/jx-yan/myTeleHealth-patientUI)
+
 ## Authors and Acknowledgment
 - Teo Wei Hern
 - Yan Jiaxing
