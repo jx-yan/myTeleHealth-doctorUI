@@ -60,7 +60,7 @@ npm run dev
 - Using NodeJS and ExpressJS for Zoom Microservice
 
 ## Additional Components Required
-View [PatientUI](https://github.com/jx-yan/myTeleHealth-patientUI)
+View and Run [PatientUI](https://github.com/jx-yan/myTeleHealth-patientUI)
 
 ## Authors and Acknowledgment
 - Teo Wei Hern
